@@ -1,0 +1,28 @@
+<div class="container">
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div fxFlex="50">
+      <mat-card>
+        <form [formGroup]="headlineForm" (ngSubmit)="saveHeadline()">
+          <editor id="title" [apiKey]="apiKey" plugins="print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help"
+          toolbar1="formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat" [initialValue]="headline" formControlName="content"></editor>
+          <button mat-raised-button color="primary" type="submit">Save</button>
+        </form>
+        <form [formGroup]="b1Form" (ngSubmit)="saveB1()">
+          <editor id="blockOne" [apiKey]="apiKey" plugins="print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help"
+          toolbar1="formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat" [initialValue]="blockOne" formControlName="content"></editor>
+          <button mat-raised-button color="primary" type="submit">Save</button>
+        </form>
+        <form [formGroup]="b2Form" (ngSubmit)="saveB2()">
+          <editor id="blockTwo" [apiKey]="apiKey" plugins="print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help"
+          toolbar1="formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat" [initialValue]="blockTwo" formControlName="content"></editor>
+          <button mat-raised-button color="primary" type="submit">Save</button>
+        </form>
+        <form [formGroup]="b3Form" (ngSubmit)="saveB3()">
+          <editor id="blockThree" [apiKey]="apiKey" plugins="print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help"
+          toolbar1="formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat" [initialValue]="blockThree" formControlName="content"></editor>
+          <button mat-raised-button color="primary" type="submit">Save</button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

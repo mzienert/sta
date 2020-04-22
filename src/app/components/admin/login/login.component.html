@@ -1,0 +1,44 @@
+<div class="container">
+  <form [formGroup]="signinForm" (ngSubmit)="signin()" *ngIf="signinUser">
+    <div fxLayout="row wrap">
+      <div fxFlex="20" fxFlexOffset="40">
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username">
+        </mat-form-field>
+      </div>
+      <div fxFlex="20" fxFlexOffset="40">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row wrap">
+      <div fxFlex="6" fxFlexOffset="40">
+        <button mat-raised-button color="primary" type="submit" [disabled]="loading">Sign in</button>
+      </div>
+      <div fxFlex="5">
+        <mat-spinner [diameter]="30" *ngIf="loading"></mat-spinner>
+      </div>
+    </div>
+  </form>
+  <form [formGroup]="changePassForm" (ngSubmit)="changePass()" *ngIf="!signinUser">
+    <div fxLayout="row wrap">
+      <div fxFlex="20" fxFlexOffset="40">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row wrap">
+      <div fxFlex="6" fxFlexOffset="40">
+        <button mat-raised-button color="primary" type="submit" [disabled]="loading">Change Password</button>
+      </div>
+      <div fxFlex="5">
+        <mat-spinner [diameter]="30" *ngIf="loading"></mat-spinner>
+      </div>
+    </div>
+  </form>
+</div>

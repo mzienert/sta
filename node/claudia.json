@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "sta-executor",
+    "name": "sta",
+    "region": "us-west-2"
+  },
+  "api": {
+    "id": "1pkijuj0ih"
+  }
+}
