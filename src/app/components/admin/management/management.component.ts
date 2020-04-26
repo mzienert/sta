@@ -56,25 +56,25 @@ export class ManagementComponent implements OnInit {
       this.blockThree = res[3].body;
       this.b3Form.patchValue({content: this.blockThree});
 
-    })
+    });
 
   }
 
   saveHeadline() {
-    this.contentService.updateBlock('1', this.headlineForm.value.content)
-    console.log(this.headlineForm.value.content)
+    this.contentService.updateBlock('1', this.headlineForm.value.content);
+    console.log(this.headlineForm.value.content);
   }
 
   saveB1() {
-    this.contentService.updateBlock('2', this.b1Form.value.content)
+    this.contentService.updateBlock('2', this.b1Form.value.content);
   }
 
   saveB2() {
-    this.contentService.updateBlock('3', this.b2Form.value.content)
+    this.contentService.updateBlock('3', this.b2Form.value.content);
   }
 
   saveB3() {
-    this.contentService.updateBlock('4', this.b3Form.value.content)
+    this.contentService.updateBlock('4', this.b3Form.value.content);
   }
 
 }

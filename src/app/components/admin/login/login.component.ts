@@ -36,19 +36,19 @@ export class LoginComponent implements OnInit {
   }
 
   signin(): void {
-    if(this.signinForm.valid) {
+    if (this.signinForm.valid) {
       this.loading = true;
-      let username = this.signinForm.value.username;
-      let password = this.signinForm.value.password;
+      const username = this.signinForm.value.username;
+      const password = this.signinForm.value.password;
       Auth.signIn(username, password)
       .then(user => {
         this.loading = false;
-        if(user['challengeName'] == 'NEW_PASSWORD_REQUIRED') {
+        if (user['challengeName'] == 'NEW_PASSWORD_REQUIRED') {
           this.signinUser = false;
           this.authUser = user;
           this.snackBar.open('Password reset required', '', {
             duration: 3000
-          })
+          });
         } else {
           this.router.navigateByUrl('/management');
         }
@@ -59,14 +59,14 @@ export class LoginComponent implements OnInit {
   }
 
   changePass(): void {
-    let requiredAttributes = {};
+    const requiredAttributes = {};
     Auth.completeNewPassword(this.authUser, this.changePassForm.value.password, requiredAttributes)
     .then(res => {
       this.signinUser = true;
       this.snackBar.open('Password changed, please login', '', {
         duration: 3000
-      })
-    })
+      });
+    });
   }
 
 }

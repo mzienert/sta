@@ -16,17 +16,17 @@ export class ContentService {
   }
 
   public updateBlock(b: string, data: string) {
-    let encoded = encodeURI(data);
-    let body = {
+    const encoded = encodeURI(data);
+    const body = {
       id: b,
       body: encoded
-    }
-    console.log(body)
+    };
+    console.log(body);
     this.http.post(`${this.baseUrl}/update-content`, body).subscribe(res => {
-      console.log(res)
-    })
+      console.log(res);
+    });
   }
 
 }
 
-//https://1pkijuj0ih.execute-api.us-west-2.amazonaws.com/latest/get-content
+// https://1pkijuj0ih.execute-api.us-west-2.amazonaws.com/latest/get-content
