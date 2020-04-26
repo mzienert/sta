@@ -1,97 +1,70 @@
-<div fxLayout="row wrap" class="header">
+<div class="container">
 
-  <div fxFlex="35" fxFlexOffset="7">
-    <h1 class="mat-headline">Steven Tomczak & Associates</h1>
+  <div fxLayout="row wrap" class="header">
+    <div fxFlexOffset="7" fxFlex.lg="35" fxFlex.md="43" fxFlex.sm="43" fxFlex.xs="81">
+      <h1 class="mat-headline">Steven Tomczak & Associates</h1>
+    </div>
+    <div fxFlex.xs="12" fxShow.xs fxHide.gt-xs>
+      <mat-icon (click)="call()">phone</mat-icon>
+    </div>
+    <div fxFlex.lg="51" fxFlex.md="43" fxFlex.sm="45" fxHide.xs class="right">
+      <h1 class="mat-headline">(970)-259-0128</h1>
+    </div>
   </div>
 
-  <div fxFlex="51" class="right">
-    <h1 class="mat-headline">(970)-259-0128</h1>
+  <div fxLayout="row wrap">
+    <div fxFlex.gt-md="70" fxFlexOffset.gt-md="15" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100">
+      <img src="../assets/images/h-1-opt.png">
+    </div>
+    <div fxFlex.gt-md="70" fxFlexOffset.gt-md="15" fxFlex.md="100" fxFlex.sm="100" fxFlex.xs="100" class="quote center">
+      <h2 class="mat-title caption"><i>It's Worth Many A Fight To Reach Dream-Like Heights</i></h2>
+    </div>
   </div>
 
-</div>
-
-<div fxLayout="row wrap">
-
-  <div fxFlex="70" fxFlexOffset="15">
-    <img src="../assets/images/h-1-opt.png">
-  </div>
-  <div fxFlex="70" fxFlexOffset="15" class="quote center">
-    <h2 class="mat-title caption"><i>It's Worth Many A Fight To Reach Dream-Like Heights</i></h2>
+  <div fxLayout="row wrap" class="content">
+    <div fxFlex.gt-md="70" fxFlexOffset.gt-md="15" fxFlex.lt-lg="100">
+      <mat-card>
+        <div [innerHtml]="body1"></div>
+      </mat-card>
+    </div>
   </div>
 
-</div>
-
-<div fxLayout="row wrap" class="content">
-
-  <div fxFlex="70" fxFlexOffset="15">
-
-    <mat-card>
-
-      <div [innerHtml]="body1"></div>
-
-    </mat-card>
-
+  <div fxLayout="row wrap" class="content" fxLayoutGap.gt-sm="10px">
+    <div fxFlex.lg="48" fxFlexOffset.lg="15" fxFlex.md="60" fxFlex.lt-md="100">
+      <mat-card>
+        <div [innerHtml]="body2"></div>
+      </mat-card>
+      <mat-card class="content">
+        <div [innerHtml]="body3"></div>
+      </mat-card>
+      <mat-card class="content">
+          <div [innerHtml]="body4"></div>
+      </mat-card>
+    </div>
+    <div fxFlex.lg="21" fxFlex.md="calc(40% - 10px)" fxFlex.lt-md="100">
+      <mat-card>
+        <h2 class="mat-title">Principles To Practice By</h2>
+        <ul class="testimonialLi">
+          <li>
+            <blockquote><p>Whether you think you can or you can't, you're right.</p><cite>Henry Ford</cite>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote><p>The two most important days in your life are the day you are born and the day you find out why.</p><cite>Mark Twain</cite>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote><p>Go confidently in the direction of your dreams. Live the life you have imagined.</p><cite>Henry David Thoreau</cite>
+            </blockquote>
+          </li>
+        </ul>
+        <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FStevenTomczakConsulting&amp;width=303px&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="margin: 0 auto; border:none; overflow:hidden; width:100%; height:181px;" allowTransparency="true"></iframe>
+      </mat-card>
+    </div>
   </div>
 
-</div>
-
-<div fxLayout="row wrap" class="content" fxLayoutGap="10px">
-
-  <div fxFlex="48" fxFlexOffset="15">
-
-    <mat-card>
-
-      <div [innerHtml]="body2"></div>
-
-    </mat-card>
-
-    <mat-card class="content">
-
-      <div [innerHtml]="body3"></div>
-
-    </mat-card>
-
-    <mat-card class="content">
-
-        <div [innerHtml]="body4"></div>
-
-    </mat-card>
-
+  <div fxLayout="row wrap" class="footer">
+    <p class="mat-body">&copy; {{year}} Steven Tomczak & Associates, Inc.</p>
   </div>
-
-  <div fxFlex="21">
-
-    <mat-card>
-
-      <h2 class="mat-title">Principles To Practice By</h2>
-
-      <ul class="testimonialLi">
-
-        <li>
-          <blockquote><p>Whether you think you can or you can't, you're right.</p><cite>Henry Ford</cite>
-          </blockquote>
-        </li>
-
-        <li>
-          <blockquote><p>The two most important days in your life are the day you are born and the day you find out why.</p><cite>Mark Twain</cite>
-          </blockquote>
-        </li>
-
-        <li>
-          <blockquote><p>Go confidently in the direction of your dreams. Live the life you have imagined.</p><cite>Henry David Thoreau</cite>
-          </blockquote>
-        </li>
-
-      </ul>
-
-      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FStevenTomczakConsulting&amp;width=303px&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:325pxpx; height:258px;" allowTransparency="true"></iframe>
-
-    </mat-card>
-
-  </div>
-
-</div>
-
-<div fxLayout="row wrap" class="footer">
-
+  
 </div>

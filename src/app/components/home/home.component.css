@@ -1,3 +1,6 @@
+.container {
+  max-width: 100%;
+}
 .header {
   background-color: rgb(0,0,0,0.85);
   height: 65px;
@@ -8,6 +11,7 @@ h1 {
 }
 .right {
   text-align: right;
+  margin: 0 30px 0 0;
 }
 img {
   width: 100%;
@@ -20,13 +24,21 @@ h2.caption {
   color: #fff;
   font-weight: 300;
 }
+@media only screen and (max-width: 414px) {
+  h2.caption {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
 .quote {
-  background-color: rgb(0,0,0,0.85);
+  background-color: rgba(0,0,0,0.85);
   height: 65px;
-  margin: -4px 0 0 0;
+  margin: -4px 0 10px 0;
 }
 .content {
-  margin: 10px 0 0 0;
+  margin: 0 0 10px 0;
 }
 p {
   font-size: 16px
@@ -36,6 +48,8 @@ p {
   background-repeat: repeat;
   height: 120px;
   margin: 20px 0 0 0;
+  padding: 0 0 0 20px;
+  color: #fff;
 }
 .testimonialLi {
   list-style: none;
@@ -43,4 +57,8 @@ p {
 }
 .testimonialLi li {
   border-bottom: 1px solid #444;
+}
+.mat-icon {
+  color: #fff;
+  margin: 18px 0;
 }
